@@ -1,0 +1,93 @@
+body {
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: center; /* Centers items along the X-axis */
+    justify-content: flex-start; /* Optional: you can control vertical alignment */
+    min-height: 100vh; /* Ensures the body takes up the full height of the viewport */
+    background-color: #ffdcb7;
+    margin: 0; /* Remove default margin for the body */
+}
+
+#submit_button {
+    background-color: #28a745; /* Green color */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#submit_button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Fade-in effect */
+.rule {
+    opacity: 0; /* Start as invisible */
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transform: translateY(-10px); /* Optional: small movement for a smoother appearance */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Fade and move in */
+}
+
+.rule.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset the movement */
+}
+
+.rule.valid{
+    color: green;
+}
+
+.rule.invalid{
+    color: red;
+}
+
+#rules_container{
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+#password_container {
+    width: 100%; /* Make container full width or adjust as needed */
+    max-width: 400px; /* Limit the width for better design */
+    margin: 20px auto; /* Center the container horizontally with some margin */
+    padding: 15px; /* Add some padding inside the container */
+    background-color: #222; /* Change the background color */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for a subtle 3D effect */
+    text-align: center; /* Center align content inside the container */
+}
+
+#password {
+    width: 90%; /* Make textarea full width */
+    padding: 10px; /* Add padding inside the textarea */
+    font-size: 1.8em; /* Increase font size for readability */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    outline: none; /* Remove focus outline */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
+    resize: none; /* Disable resizing by the user if you want a fixed size */
+    overflow-wrap: break-word; /* Ensure long text breaks properly */
+    height: 50px; /* Set a default height */
+    line-height: 1.5em; /* Control the space between lines */
+}
+
+#password::placeholder {
+    color: #aaa; /* Custom color for the placeholder text */
+    font-style: italic; /* Italicized placeholder */
+}
+
+#pw_length_container{
+    display:flex;
+    align-items: center; /* Centers items along the X-axis */
+}
+
+#length_display{
+    margin-left: 10px;
+    font-size: large;
+}

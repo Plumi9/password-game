@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="" alt="" id="pokemon">
+    <h1>Password Game</h1>
+
+    <div id="pw_length_container">
+        <div id="password_container">
+            <textarea id="password" placeholder="Enter your password" oninput="autoGrow(this); validate_Password(); display_length()"></textarea>
+            <button id="submit_button" onclick="changePage()" style="display:none;">Submit</button>
+        </div>
+        <div id="length_display">0</div>
+    </div>
+
+    
+    
+    <div id="rules_container">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
